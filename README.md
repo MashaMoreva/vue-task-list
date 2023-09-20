@@ -1,7 +1,17 @@
-# Vue 3 + Vite
+# Список задач
+### Практическая работа, выполненная в рамках курса «Фреймворк Vue.js» от Skillbox.
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Это небольшое веб-приложение для управления списком задач.
 
-## Recommended IDE Setup
+#### Функционал:
+* **Добавление задач:** Введите задачу в текстовое поле и нажмите кнопку "Добавить" или нажмите Enter.
+* **Отметка задачи как выполненной:** Кликните на флажок слева от задачи, чтобы отметить ее как выполненную. Сделайте еще один клик, чтобы снять отметку.
+* **Отображение количества оставшихся задач:** В верхней части страницы отображается количество оставшихся задач.
+* **Отображение мотивационной картинки:** Если все задачи выполнены, на странице будет отображаться мотивационная картинка.
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+#### Стек:
+
+Vue.js выбран из-за легкости и гибкости. Используется для создания интерактивных компонентов и управления данными.
+
+#### Ссылка на проект
+* [посмотреть на Netlify](https://sprightly-salamander-51b948.netlify.app/)

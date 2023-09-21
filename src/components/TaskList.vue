@@ -12,17 +12,11 @@
         {{ task.text }}
       </div>
     </div>
-    <form @submit.prevent="addTask">
-      <div class="form">
-        <input :placeholder="placeholderText" v-model="newTask" />
-        <button
-          :type="buttonType"
-          :disabled="isButtonDisabled"
-          @click="addTask"
-        >
-          Добавить
-        </button>
-      </div>
+    <form class="form" @submit.prevent="addTask">
+      <input :placeholder="placeholderText" v-model="newTask" />
+      <button :type="buttonType" :disabled="isButtonDisabled" @click="addTask">
+        Добавить
+      </button>
     </form>
     <transition name="fade">
       <img
@@ -44,7 +38,7 @@ export default {
         { text: "Сделать интернет-магазин на Vue", done: false },
       ],
       placeholderText: "Введите задачу",
-      buttonType: "button",
+      buttonType: "submit",
       isButtonDisabled: false,
     };
   },

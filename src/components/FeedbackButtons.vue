@@ -1,23 +1,23 @@
 <template>
   <div>
     <button type="button" @click="incrementLike">
-      &#9650; {{ likeCounter }}
+      &#9650; {{ task.likeCounter }}
     </button>
     <button type="button" @click="incrementDislike">
-      &#9660; {{ dislikeCounter }}
+      &#9660; {{ task.dislikeCounter }}
     </button>
   </div>
 </template>
 
 <script>
 export default {
-  props: ["task", "likeCounter", "dislikeCounter"],
+  props: ["task"],
   methods: {
     incrementLike() {
-      this.$emit("update:likeCounter", this.likeCounter + 1);
+      this.$emit("incrementLike", this.task);
     },
     incrementDislike() {
-      this.$emit("update:dislikeCounter", this.dislikeCounter + 1);
+      this.$emit("incrementDislike", this.task);
     },
   },
 };

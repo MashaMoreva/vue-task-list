@@ -30,12 +30,10 @@
 </template>
 
 <script>
-import FeedbackButtons from "./components/FeedbackButtons.vue";
 import TaskList from "./components/TaskList.vue";
 
 export default {
   components: {
-    FeedbackButtons,
     TaskList,
   },
   data() {

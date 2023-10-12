@@ -11,15 +11,28 @@
       {{ task.text }}
       <feedback-buttons
         :task="task"
-        :likeCounter.sync="task.likeCounter"
-        :dislikeCounter.sync="task.dislikeCounter"
+        @incrementLike="incrementLike"
+        @incrementDislike="incrementDislike"
       ></feedback-buttons>
     </div>
   </div>
 </template>
 
 <script>
+import FeedbackButtons from "./FeedbackButtons.vue";
+
 export default {
+  components: {
+    FeedbackButtons,
+  },
   props: ["tasks", "listTitle"],
+  methods: {
+    incrementLike(task) {
+      task.likeCounter++;
+    },
+    incrementDislike(task) {
+      task.dislikeCounter++;
+    },
+  },
 };
 </script>

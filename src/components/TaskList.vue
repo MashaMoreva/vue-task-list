@@ -9,7 +9,11 @@
     >
       <input type="checkbox" v-model="task.done" />
       {{ task.text }}
-      <feedback-buttons></feedback-buttons>
+      <feedback-buttons
+        :task="task"
+        :likeCounter.sync="task.likeCounter"
+        :dislikeCounter.sync="task.dislikeCounter"
+      ></feedback-buttons>
     </div>
   </div>
 </template>

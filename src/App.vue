@@ -60,13 +60,18 @@ export default {
         },
       ],
       placeholderText: "Введите задачу",
-      buttonType: "button",
+      buttonType: "submit",
       isButtonDisabled: false,
     };
   },
   methods: {
     addTask() {
-      this.tasks.push({ text: this.newTask, done: false });
+      this.tasks.push({
+        text: this.newTask,
+        done: false,
+        likeCounter: 0,
+        dislikeCounter: 0,
+      });
       this.newTask = "";
     },
   },
